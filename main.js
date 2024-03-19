@@ -98,13 +98,15 @@ cart()
       const shoeBody = document.querySelector("#shoe_body")
       const everyThing = document.querySelector("#get")
       const cancel = document.querySelector("#cancel_menu")
-
+      const backOfShoe = document.querySelector("#shoe")
+      
 
 
         evt.classList.toggle("shoe_active")
         shoeBody.classList.toggle("body_active")
         everyThing.classList.toggle("change")
         cancel.classList.toggle("cancel_menu_active")
+        backOfShoe.classList.toggle("shoe_blur")
 
 
 
