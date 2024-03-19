@@ -40,7 +40,7 @@ color: hsl(26, 100%, 55%);
 
 #cart img, #pic img {
     position: relative;
-    left: 65pc;
+    left: 55pc;
     bottom: 2pc;
 }
 
@@ -48,7 +48,7 @@ div.picBlock {
     border: 2px solid;
     border-radius: 5px;
     position: relative;
-    left: 50pc;
+    left: 35pc;
     top: 5pc;
     width: 400px;
     height: fit-content; 
@@ -123,11 +123,12 @@ img.shoes {
     cursor: pointer;
 }
 
+
 img.shoe_active {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-30%,-30%);
     width: 500px;
     height: fit-content;
     transition: all 0.7s;
@@ -146,10 +147,8 @@ div#cancel_menu {
 
 
 
-section#get.change {opacity: 2%;transition: ease-in-out 0.8s;}
-
-
-
+section#get.change,img.shoe_blur
+ {opacity: 5%;transition: ease-in-out 0.8s;}
 
 img.shoes:hover { cursor: pointer;transition: all 0.5s;}
 
