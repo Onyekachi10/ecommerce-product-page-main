@@ -1,0 +1,777 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu";
+   
+}
+
+body {overflow-x: hidden;}
+nav {
+    display: flex;
+    font-size: 14px;
+    margin-top: 2pc;
+}
+
+
+div.nav-items a  {
+    margin: 20px;
+    text-decoration: none;
+    position: relative;
+    left: 6pc;
+    font-weight: 700;
+    opacity: 75%;
+    font-size: 20px;
+    color: hsl(219, 9%, 45%);
+}
+
+div.nav-items a:hover {
+    color: hsl(0, 0%, 0%);
+    transition: all 0.3s;
+}
+div.nav-items a:hover::before {
+  content: "";
+position: absolute;
+border: 3px solid;
+width: 100%;
+top: 4pc;
+color: hsl(26, 100%, 55%);
+}
+
+#cart img, #pic img {
+    position: relative;
+    left: 65pc;
+    bottom: 2pc;
+}
+
+div.picBlock {
+    border: 2px solid;
+    border-radius: 5px;
+    position: relative;
+    left: 50pc;
+    top: 5pc;
+    width: 400px;
+    height: fit-content; 
+}
+
+div.picBlock.active {
+    display: none;
+}
+
+
+span.main {
+    font-size: 20px;
+    margin-left:2pc;
+    font-weight: 700;
+}
+
+img.product {
+    border: 1px;
+    border-radius: 4px;
+    margin-left: 2pc;
+    margin-right: 10px;
+}
+
+img.delete {
+    position: relative;
+    left: 22pc;
+    bottom: 2.5pc;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+p.picp,p.picp_2 {font-size: 18px; opacity: 90%;}
+
+p.picp_2 {
+    margin-left: 7pc;
+    position: relative;
+    bottom: 2pc;
+}
+
+input#check {
+    font-weight: 700;
+border: 2px solid;
+border-radius: 10px;
+text-transform: capitalize;
+ width: 300px;
+ margin-left: 2.5pc;
+ margin-bottom: 2pc;
+ padding: 10px 20px;
+ background-color: hsl(26, 100%, 55%);
+ color: hsl(0, 0%, 100%);
+}
+
+hr {
+    width: 100%;
+    margin-top: 2pc;
+    opacity: 30%;
+}
+
+img#shoe {
+    border: 2px ;
+    border-radius: 10px;
+    margin-top: 5pc;
+}
+
+p.shoe_body { margin-top: 50px;}
+
+img.shoes {
+    margin: 10px;
+    border: 3px solid;
+    border-color: hsl(26, 100%, 55%);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+img.shoe_active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: fit-content;
+    transition: all 0.7s;
+    box-shadow: 7px 7px 8px rgb(15, 14, 14);
+}
+
+
+div#cancel_menu {
+    background-image: url("./images/icon-close.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    cursor: pointer; 
+    display: none; 
+}
+
+
+
+section#get.change {opacity: 2%;transition: ease-in-out 0.8s;}
+
+
+
+
+img.shoes:hover { cursor: pointer;transition: all 0.5s;}
+
+
+section#get {margin-top: 10pc;transition: all 0.8s;}
+
+span.com {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 15px;
+    position: relative;
+    bottom: 2pc;
+    color:hsl(26, 100%, 55%);
+}
+
+h1 {
+    color: hsl(0, 0%, 0%);
+    font-size: 60px;
+    margin-bottom: 4pc;
+}
+
+
+p.about {
+    font-size: 18px;
+    opacity: 70%;
+    font-weight: 400;
+    color: hsl(219, 9%, 45%);
+}
+
+
+p.price {font-size: 30px;}
+
+button {
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    left: 2pc;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+}
+
+
+span.cancel {opacity: 30%;font-size: 25px;}
+
+span.cancel::before {
+    content: "";
+    position: absolute;
+    border: 1px solid;
+    width: 6%;
+    top: 41.8pc;
+}
+
+input#min,input#plus {
+  width: 6%; 
+  font-size: 30px; 
+  margin: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+span.num {font-size: 20px;font-weight: 900;}
+
+input#add_cart {
+    width: 300px;
+    height: 50px;
+    position: relative;
+    left: 10pc;
+    bottom: 4.5pc;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+}
+
+img#pic_cart {
+    position: relative;
+    right: 5pc;
+    bottom: 4.5pc;
+   border: 2;
+   border: 10px;
+}
+
+@media screen and (max-width:1024px) and (min-width:992px) {
+    a#cart img, a#pic img {left: 40pc;}
+
+div.nav-items a {font-size: 16px;}
+
+div.picBlock {
+    position: relative;
+    left: 20pc;
+    top: 2pc;
+    width: 400px;
+    height: fit-content;   
+}
+
+
+section#get {margin-left: 2pc;}
+
+h1 {font-size: 40px;}
+
+p.about,button  {font-size: 14px;}
+
+p.price {font-size: 20px;}
+
+span.cancel {font-size: 15px;}
+ 
+span.cancel::before {width: 5%;top: 36.2pc;}
+
+input#min,input#plus { width: 3%; font-size: 20px; }
+
+  input#add_cart { width: 150px;font-size: 15px;}
+
+img#pic_cart {left: 1pc;}
+
+}
+
+
+@media screen and (max-width:991px) and (min-width:800px) {
+
+
+ a#cart img, a#pic img {left: 45pc;width: 35px;}
+
+ div.nav-items a {font-size: 15px;}
+    
+    div.picBlock {left: 8pc; width: 400px; }
+
+
+    img#shoe,img.shoes {
+        margin-top: 5pc;
+        width: 400px;
+       position: relative;
+       right: 6pc;
+    }
+
+    img.shoes {margin: 10px;width: 70px;}
+
+    section#get {
+        margin-left: 2pc;
+        position: relative;
+        left: 20pc;
+        bottom: 41pc;
+    } 
+
+    h1 {font-size: 35px;}
+
+    p.about,button  {font-size: 14px;}
+
+    p.price {font-size: 20px;}
+
+span.cancel {font-size: 15px;}
+ 
+span.cancel::before { width: 7%; top: 18.8pc;}
+}
+
+
+@media screen  and (max-width:799px) and (min-width:768px) {
+
+    a.brand img {
+        width: 150px;
+        position: relative;
+        left: 6pc;
+    }
+
+    a.nav_active  {position: relative;bottom: 12pc;}
+
+    a#cart img, a#pic img {
+        left: 30pc;
+        top: 0.1pc;
+        width: 35px;
+    }
+
+    div.menu-bar {
+        background-image: url("./images/icon-menu.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 200px;
+        position: relative;
+        right: 10pc;
+        cursor: pointer;
+    }
+
+    div.menu-bar_active {
+        background-image: url("./images/icon-close.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 200px;
+        position: relative;
+        right: 10pc;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    
+     div.nav-items a {
+        display: none;
+        font-size: 13px;
+        left: -13pc;
+        top: 2pc;
+    }
+
+    div.nav-items a:hover::before {width: 80%;top: 2pc;}
+
+    div.nav-items_active a {display: block; }
+
+        
+        div.picBlock {left: 8pc; width: 400px; }
+    
+    
+        img#shoe,img.shoes {
+            width: 350px;
+           position: relative;
+           left: 20px;
+           bottom: 6pc;
+        }
+    
+        img.shoes {margin: 10px; width: 60px;}
+    
+        section#get {
+            margin-left: 2pc;
+            position: relative;
+            left: 4pc;
+            bottom: 10pc;
+        } 
+    
+        h1 {font-size: 35px;}
+    
+        p.about,button  {font-size: 14px;}
+    
+        p.price {font-size: 20px;}
+    
+    span.cancel {font-size: 15px;}
+     
+    span.cancel::before {width: 18%;top: 24pc;}
+
+input#min,input#plus {width: 5%; font-size: 20px; }
+
+  input#add_cart { width: 130px;font-size: 15px;}
+
+img#pic_cart {left: 2pc;}
+
+}
+
+
+/* mobile view */
+
+@media screen and (max-width:767px) and (min-width:625px)  {
+
+    a.brand img {
+        width: 150px;
+        position: relative;
+        left: 4pc;
+    }
+    
+    div.menu-bar {
+        background-image: url("./images/icon-menu.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 200px;
+        position: relative;
+        right: 12pc;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    div.menu-bar_active {
+        background-image: url("./images/icon-close.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 200px;
+        position: relative;
+        right: 12pc;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    
+     div.nav-items a {
+        display: none;
+        font-size: 16px;
+        left: -15pc;
+        top: 2pc;
+        
+    }
+
+    div.nav-items a:hover::before {width: 70%;top: 2pc;}
+
+    div.nav-items_active a {display: block;}
+
+    a.nav_active  {position: relative;bottom: 12pc;}
+
+    a#cart img, a#pic img {
+        left: 19pc;
+        top: 0.1pc;
+        width: 35px;
+    }
+
+    div.picBlock {
+        left: 5pc;
+        width: 300px;
+        height: 200px;
+        top: -9pc;
+    }
+
+    p.picp,p.picp_2 { font-size: 13px;}
+
+    input#check {
+         width: 150px;
+         margin-left: 4pc;
+     position: relative;
+     bottom: 3pc;
+    }
+
+    
+    img#shoe {
+        width: 700px;
+        position: relative;
+        right: 5pc;
+        bottom: 8pc;
+        overflow-x: hidden;
+    }
+
+    img.shoes {display: none;}
+
+   
+    section#get {position: relative; top: -15pc;} 
+
+    h1,p.about {text-align: left;font-size: 80px;}
+
+    p.about {font-size: 30px;}
+
+    p.price {font-size: 30px;}
+    
+    span.cancel {font-size: 30px;}
+     
+    span.cancel::before {width: 20%;top: 43pc;}
+
+input#min,input#plus {width: 5%; font-size: 20px; }
+
+  input#add_cart {width: 150px;font-size: 20px;}
+
+img#pic_cart {left: 0.5pc;}
+
+}
+
+
+
+@media screen and (max-width:624px) and (min-width:400px) {
+    a.brand img {
+        width: 150px;
+        position: relative;
+        left: 4pc;
+    }
+    
+    div.menu-bar {
+        background-image: url("./images/icon-menu.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 200px;
+        position: relative;
+        right: 10pc;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    div.menu-bar_active {
+        background-image: url("./images/icon-close.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 200px;
+        position: relative;
+        right: 10pc;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    div.nav-items a {
+        display: none;
+        font-size: 16px;
+        left: -12pc;
+        top: 2pc;  
+    }
+
+    div.nav-items a:hover::before {width: 70%;top: 2pc;}
+
+     
+    div.nav-items_active a {display: block;}
+
+    a.nav_active {position: relative; bottom: 12.5pc;}
+ 
+    a#cart img, a#pic img {
+        left: 15pc;
+        top: 0.1pc;
+        width: 35px;
+    }
+
+    div.picBlock {
+        left: 2pc;
+        width: 300px;
+        height: 200px;
+        top: -9pc;
+    }
+
+    img.delete {left: 16pc;width: 17px;}
+
+    p.picp,p.picp_2 {font-size: 10px;}
+
+    input#check {
+         width: 120px;
+         margin-left: 5pc;
+         position: relative;
+         bottom: 4pc;
+    }
+
+    img#shoe {
+        width: 800px;
+        position: relative;
+        right: 4pc;
+        bottom: 6pc;
+        overflow: hidden;
+    }
+
+    img.shoes { display: none;}
+
+    section#get {
+        position: relative;
+        top: -15pc;
+    } 
+
+    h1,p.about {text-align: left;font-size: 50px;}
+
+    p.about {font-size: 20px;}
+
+    p.price {font-size: 30px;}
+    
+    span.cancel {
+        font-size: 20px;
+        position: relative;
+        left: 25pc;
+        bottom: 3pc;
+    }
+     
+p.value {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 50%;
+    
+}
+input#min,input#plus {width: 10%; font-size: 20px;}
+
+  span.num {position: relative;top: 7px;}
+
+
+  input#add_cart {
+    width: 500px;
+   font-size: 20px;
+   top: 5pc;
+   left: 0.5pc;
+   
+}
+
+img#pic_cart {
+    left: 9pc;
+    top: 2.8pc;
+    width: 30px;
+}   
+    
+}
+
+
+/* SMALLER MOBILE SCREEN */
+
+@media screen and (max-width:399px) {
+    a.brand img {
+        width: 150px;
+        position: relative;
+        left: 6pc;
+    }
+    
+    div.menu-bar {
+        background-image: url("./images/icon-menu.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 200px;
+        position: relative;
+        right: 8pc;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    div.menu-bar_active {
+        background-image: url("./images/icon-close.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 200px;
+        position: relative;
+        right: 8pc;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    div.nav-items a {
+        display: none;
+        font-size: 20px;
+        left: -12pc;
+        top: 2pc;  
+    }
+
+    div.nav-items a:hover::before {width: 70%;top: 2pc;}
+
+     
+    div.nav-items_active a {display: block;}
+
+    a.nav_active  {position: relative;bottom: 14pc;}
+ 
+    a#cart img, a#pic img {
+        left: 25pc;
+        top: 0.3px;
+        width: 45px;
+        transition: all 0.4s;
+    }
+
+    div.picBlock {
+        left: 14pc;
+        width: 300px;
+        height: 200px;
+        top: -9pc;
+    }
+
+    img.delete {left: 16pc;width: 17px;}
+
+    p.picp,p.picp_2 {font-size: 13px;}
+
+    input#check {
+         width: 120px;
+         margin-left: 5pc;
+         position: relative;
+         bottom: 4pc;
+    }
+
+    img#shoe {
+        width: 800px;
+        position: relative;
+        right: 2pc;
+        bottom: 6pc;
+        overflow: hidden;
+    }
+
+    img.shoes {
+        display: none;
+    }
+
+    section#get {
+        position: relative;
+        margin-left: 40px;
+        top: -13pc;
+    } 
+
+    h1,p.about {
+        text-align: left;
+        font-size: 50px;
+    }
+
+    p.about {
+        font-size: 30px;
+    }
+
+    p.price {font-size: 30px;}
+    
+    span.cancel {
+        font-size: 20px;
+        position: relative;
+        left: 23pc;
+        bottom: 3pc;
+    }
+     
+p.value {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 20px;   
+}
+
+input#min,input#plus {width: 40%; font-size: 30px;}
+
+  input#min {margin-right: 7pc;}
+
+  input#plus {margin-left: 7pc;}
+
+  span.num {
+    margin-top: 1pc;
+    position: relative;
+    left: 1pc;
+  }
+
+
+  input#add_cart {
+    width: 500px;
+   font-size: 20px;
+   top: 5pc;
+   left: -3pc;
+   
+}
+
+img#pic_cart {
+    left: 4pc;
+    top: 2.8pc;
+    width: 30px;
+}   
+ 
+}

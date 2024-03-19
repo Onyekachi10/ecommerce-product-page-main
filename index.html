@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+<article>
+<div class="container">
+  <nav>
+    <a href="index.html" class="brand">
+      <img src="./images/logo.svg" alt="logo" width="200">
+    </a>
+
+    <div class="menu-bar"></div>
+    <div class="navigation">
+      <div class="nav-items">
+        <a href="#"> Collections</a>
+        <a href="#"> Men</a>
+        <a href="#"> Women</a>
+        <a href="#">Contact</a>
+      </div> 
+      <a href="#" id="cart" class="ava">
+        <img  src="./images/icon-cart.svg" alt="logo"
+        width="50" >
+       </a>
+             
+   <a href="#" id="pic" class="ava">
+    <img  src="./images/image-avatar.png" alt="avatar"
+    width="50" >
+   </a> 
+   
+   <div class="picBlock">
+    <span class="main">Cart</span>
+    <hr>
+    <div id="hiddenCart">
+      <p class="picp">
+        <img src="./images/image-product-1-thumbnail.jpg" width="60"
+        class="product" alt="shoe">
+          Fall Limited Edition Sneakers
+          </p>
+         <p class="picp_2">$125.00</p>
+<img src="./images/icon-delete.svg" alt="delete" width="20" 
+class="delete">        
+         <input type="button" value="checkout" id="check">  
+    </div>
+  </div>
+    </div>
+</nav>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div id="shoe_back">
+        <img src="./images/image-product-1.jpg" alt="shoe" width="500"
+        id="shoe">
+        
+        <div id="cancel_menu"></div>
+        <p id="shoe_body">
+          <img src="./images/image-product-1-thumbnail.jpg" width="100"
+          alt="shoe" class="shoes">
+          <img src="./images/image-product-2-thumbnail.jpg" width="100"
+          alt="shoe" class="shoes">
+          <img src="./images/image-product-3-thumbnail.jpg" width="100"
+          alt="shoe" class="shoes">
+          <img src="./images/image-product-4-thumbnail.jpg" width="100"
+          alt="shoe" class="shoes">
+        
+        </p>
+      </div>
+    </div>
+    <div class="col">
+      <section id="get">
+        <span class="com">Sneaker Company</span>
+        <h1>
+          Fall Limited Edition  Sneakers  
+        </h1>
+    <p class="about">
+      These low-profile sneakers 
+      are your perfect casual wear companion.
+      Featuring a durable rubber outer sole, 
+      they’ll withstand everything the weather can offer.
+    </p>
+
+  <p class="price">
+ <strong>$125.00</strong> 
+ <button>50%</button> <br>
+  <span class="cancel">$250.00</span>
+  </p>
+
+
+  <p class="value">
+    <input type="button" value="-" id="min">
+    <span class="num">0</span>
+    <input type="button" value="+" id="plus">
+  </p>
+
+  <input type="button" value="Add to cart" id="add_cart">
+  <img src="./images/icon-cart.svg" alt="cart" width="20"
+  id="pic_cart">
+      </section>
+    </div>
+  </div>
+  </div>
+</article>
+</body>
+</html>
