@@ -678,17 +678,22 @@ img#pic_cart {
     a.nav_active{position: relative;bottom: 30pc;}
  
     a#cart img, a#pic img {
-        left: 9pc;
+        left: 5pc;
         bottom: 0pc;
         width: 29px;
         transition: all 0.4s;
     }
 
+a.ava { position: relative; left: 5pc;}
+
+    a.ava.active {position: relative;left: 3pc;}
+
     div.picBlock {
-        left: -5pc;
+        left: -3pc;
         width: 282px;
         height: 202px;
         top: 1pc;
+        margin-bottom: 10pc;
     }
 
     img.delete {left: 16pc;width: 17px;}
