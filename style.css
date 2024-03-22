@@ -14,7 +14,7 @@ nav {
 }
 
 
-div.nav-items a  {
+div.nav-items a {
     margin: 20px;
     text-decoration: none;
     position: relative;
@@ -38,7 +38,7 @@ top: 4pc;
 color: hsl(26, 100%, 55%);
 }
 
-#cart img, #pic img {
+a#cart img, a#pic img {
     position: relative;
     left: 55pc;
     bottom: 2pc;
@@ -107,10 +107,26 @@ hr {
     opacity: 30%;
 }
 
-img#shoe {
-    border: 2px ;
+hr.line {
+    opacity: 60%;
+  width: 250%;
+  position: relative;
+  right: 15pc;
+  bottom: 2pc;
+}
+
+div#shoe {
+   background: url("./images/image-product-1.jpg")no-repeat;
+   background-size: contain;
+   width: 500px;
+   height: 600px;
+   margin-top: 8pc;
+   border-radius: 10px;  
+}
+
+img.replace {
     border-radius: 10px;
-    margin-top: 5pc;
+    transition: all 0.5s;
 }
 
 p.shoe_body { margin-top: 50px;}
@@ -121,36 +137,15 @@ img.shoes {
     border-color: hsl(26, 100%, 55%);
     border-radius: 15px;
     cursor: pointer;
+    position: relative;
+    bottom: 5pc;
 }
-
-
-img.shoe_active {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-30%,-30%);
-    width: 500px;
-    height: fit-content;
-    transition: all 0.7s;
-    box-shadow: 7px 7px 8px rgb(15, 14, 14);
-}
-
-
-div#cancel_menu {
-    background-image: url("./images/icon-close.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 20px;
-    cursor: pointer; 
-    display: none; 
-}
-
 
 
 section#get.change,img.shoe_blur
  {opacity: 5%;transition: ease-in-out 0.8s;}
 
-img.shoes:hover { cursor: pointer;transition: all 0.5s;}
+img.shoes:hover { cursor: pointer;transition: all 0.5s; opacity: 50%;}
 
 
 section#get {margin-top: 10pc;transition: all 0.8s;}
@@ -247,13 +242,6 @@ div.picBlock {
     height: fit-content;   
 }
 
-img.shoe_active {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-30%,-30%);
-}
-
 
 section#get {margin-left: 2pc;}
 
@@ -265,7 +253,7 @@ p.price {font-size: 20px;}
 
 span.cancel {font-size: 15px;}
  
-span.cancel::before {width: 5%;top: 36.2pc;}
+span.cancel::before {width: 5%;top: 39.2pc;}
 
 input#min,input#plus { width: 3%; font-size: 20px; }
 
@@ -279,39 +267,45 @@ img#pic_cart {left: 1pc;}
 @media screen and (max-width:991px) and (min-width:800px) {
 
 
- a#cart img, a#pic img {left: 45pc;width: 35px;}
+ a#cart img, a#pic img {left: 34pc;width: 35px;}
 
  div.nav-items a {font-size: 15px;}
     
-    div.picBlock {left: 23pc; width: 400px; }
+    div.picBlock {
+        left: 14pc; 
+        top: -1pc;
+        width: 400px; 
+    }
 
 
-    img#shoe,img.shoes {
+    div#shoe,img.shoes,img.replace {
         margin-top: 5pc;
         width: 400px;
        position: relative;
        right: 6pc;
     }
 
-    img.shoes {margin: 10px;width: 70px;}
-
-    
-    img.shoe_active {
-        position: absolute;
-        top: 40%;
-        left: 39%;
-        transform: translate(-30%,-30%);
-        width: 399px;   
+    img.replace {
+        position: relative;
+        left: 0pc;
+        bottom: 5pc;
     }
+
+
+    img.shoes {
+        bottom: 218px;
+    width: 75px;
+    }
+
 
     section#get {
         margin-left: 2pc;
         position: relative;
         left: 20pc;
-        bottom: 41pc;
+        bottom: 50pc;
     } 
 
-    h1 {font-size: 35px;}
+    h1 {font-size: 27px;}
 
     p.about,button  {font-size: 14px;}
 
@@ -319,7 +313,7 @@ img#pic_cart {left: 1pc;}
 
 span.cancel {font-size: 15px;}
  
-span.cancel::before { width: 7%;top: 14.8pc;}
+span.cancel::before {width: 8%; top: 14.3pc;}
 }
 
 
@@ -331,7 +325,9 @@ span.cancel::before { width: 7%;top: 14.8pc;}
         left: 6pc;
     }
 
-    a.nav_active  {position: relative;bottom: 12pc;}
+    hr.line{display: none;}
+
+    a.nav_active {position: relative;bottom: 12pc;}
 
     a#cart img, a#pic img {
         left: 30pc;
@@ -369,42 +365,53 @@ span.cancel::before { width: 7%;top: 14.8pc;}
         top: 2pc;
     }
 
+    div.navigation {
+        margin-bottom: 10pc;
+        transition: ease-in 0.5s;
+    }
+
     div.nav-items a:hover::before {width: 80%;top: 2pc;}
 
-    div.nav-items_active a {display: block; }
+    div.nav-items_active a {display: block;}
 
+    
         
         div.picBlock {
             left: 8pc;
             width: 400px;
             top: 5px;
+            margin-bottom: 1pc;
         }
     
-    
-        img#shoe,img.shoes {
+    div#shoe_back {
+        position: relative;
+        bottom: 10pc;
+    }
+        div#shoe,img.shoes,img.replace {
             width: 350px;
            position: relative;
-           left: 20px;
+           left: -21px;
            bottom: 6pc;
         }
-    
-        img.shoes {margin: 10px; width: 60px;}
 
-        img.shoe_active {
-            position: absolute;
-            top: 40%;
-            left: 39%;
-            transform: translate(-30%,-30%);
-            width: 399px;
-            
+        img.replace{
+            position: relative;
+            top: 0pc;
+            left: 0pc;
         }
-        
+    
+        img.shoes {
+            margin: 5px;
+            width: 74px;
+            bottom: 20pc;
+        }
+  
     
         section#get {
-            margin-left: 2pc;
+            margin-left: -2pc;
             position: relative;
-            left: 4pc;
-            bottom: 10pc;
+            left: 3pc;
+            bottom: 16pc;
         } 
     
         h1 {font-size: 35px;}
@@ -415,7 +422,7 @@ span.cancel::before { width: 7%;top: 14.8pc;}
     
     span.cancel {font-size: 15px;}
      
-    span.cancel::before {width: 18%; top: 20pc;}
+    span.cancel::before {width: 13%;top: 18.9pc;}
 
 input#min,input#plus {width: 5%; font-size: 20px; }
 
@@ -435,6 +442,8 @@ img#pic_cart {left: 2pc;}
         position: relative;
         left: 4pc;
     }
+
+    hr.line{display: none;}
     
     div.menu-bar {
         background-image: url("./images/icon-menu.svg");
@@ -459,20 +468,23 @@ img#pic_cart {left: 2pc;}
         transition: all 0.5s;
         cursor: pointer;
     }
+
+    div.navigation{
+        margin-bottom: 5pc;
+    }
     
      div.nav-items a {
         display: none;
         font-size: 16px;
         left: -15pc;
-        top: 2pc;
-        margin-bottom: 5pc;  
+        top: 2pc; 
     }
 
     div.nav-items a:hover::before {width: 70%;top: 2pc;}
 
     div.nav-items_active a {display: block;}
 
-    a.nav_active  {position: relative;bottom: 27pc;}
+    a.nav_active  {position: relative;bottom: 12pc;}
 
     a#cart img, a#pic img {
         left: 19pc;
@@ -485,7 +497,7 @@ img#pic_cart {left: 2pc;}
         width: 300px;
         height: 200px;
         top: 2pc;
-        margin-bottom: 10pc;
+        margin-bottom: 4pc;
     }
 
     p.picp,p.picp_2 { font-size: 13px;}
@@ -500,18 +512,23 @@ img#pic_cart {left: 2pc;}
 
     img.delete { left: 16pc;bottom: 2.5pc; }
     
-    img#shoe {
-        width: 678px;
-        position: relative;
-        right: 5pc;
-        bottom: 13pc;
-        overflow-x: hidden;
+    div#shoe {
+      background: url("./images/image-product-1.jpg")no-repeat;
+      background-size: contain;
+      position: relative;
+      bottom: 15pc;
+     right: 3pc;
+    width: 600px;
     }
 
     img.shoes {display: none;}
 
    
-    section#get {position: relative; bottom: 19pc;} 
+    section#get {
+        position: relative;
+        bottom: 19pc;
+        right: 1pc;
+    } 
 
     h1,p.about {text-align: left;font-size: 44px;}
 
@@ -564,20 +581,23 @@ img#pic_cart {left: 0.5pc;}
         cursor: pointer;
     }
 
+    hr.line{display: none;}
+
     div.nav-items a {
         display: none;
         font-size: 16px;
         left: -12pc;
         top: 2pc;
-        margin-bottom: 3pc; 
     }
+
+    div.navigation {margin-bottom: 8pc;}
 
     div.nav-items a:hover::before {width: 70%;top: 2pc;}
 
      
     div.nav-items_active a {display: block;}
 
-    a.nav_active {position: relative;bottom: 19.5pc;}
+    a.nav_active {position: relative;bottom: 12.5pc;}
  
     a#cart img, a#pic img {
         left: 15pc;
@@ -590,7 +610,7 @@ img#pic_cart {left: 0.5pc;}
     width: 300px;
     height: 200px;
     top: 1pc;
-    margin-bottom: 12pc;
+    margin-bottom: 3pc;
     }
 
     img.delete {left: 16pc;width: 17px;}
@@ -604,20 +624,17 @@ img#pic_cart {left: 0.5pc;}
          bottom: 4pc;
     }
 
-    img#shoe {
-        width: 584px;
+    div#shoe {
+        width: 576px;
         position: relative;
-        right: 4pc;
-        bottom: 12pc;
+        right: 2pc;
+        bottom: 17pc;
         overflow: hidden;
     }
 
     img.shoes { display: none;}
 
-    section#get {
-        position: relative;
-        top: -15pc;
-    } 
+    section#get { position: relative; top: -24pc;} 
 
     h1,p.about {text-align: left;font-size: 50px;}
 
@@ -670,6 +687,8 @@ img#pic_cart {
         position: relative;
         left: 4pc;
     }
+
+    hr.line{display: none;}
     
     div.menu-bar {
         background-image: url("./images/icon-menu.svg");
@@ -700,39 +719,34 @@ img#pic_cart {
         font-size: 21px;
         left: -11pc;
         top: 2pc;
-        padding-bottom: 4pc;
     }
 
+    div.navigation {margin-bottom: 10pc;}
 
     div.nav-items a:hover::before {width: 70%;top: 2pc;}
 
      
     div.nav-items_active a {display: block;}
 
-    a.nav_active{position: relative;bottom: 30pc;}
+    a.nav_active {position: relative;bottom: 14.5pc;}
  
     a#cart img, a#pic img {
-        left: 5pc;
-        bottom: 0pc;
-        width: 29px;
-        transition: all 0.4s;
+        left: 9pc;
+        top: -0.3pc;
+        width: 35px;
     }
 
-a.ava { position: relative; left: 5pc;}
-
-    a.ava.active {position: relative;left: 3pc;}
-
     div.picBlock {
-        left: -3pc;
-        width: 282px;
-        height: 202px;
+        left: -5pc;
+        width: 281px;
+        height: 200px;
         top: 1pc;
-        margin-bottom: 10pc;
+       margin-bottom: 3pc;
     }
 
     img.delete {left: 16pc;width: 17px;}
 
-    p.picp,p.picp_2 {font-size: 13px;}
+    p.picp,p.picp_2 {font-size: 10px;}
 
     input#check {
          width: 120px;
@@ -740,12 +754,11 @@ a.ava { position: relative; left: 5pc;}
          position: relative;
          bottom: 4pc;
     }
-
-    img#shoe {
+    div#shoe {
         width: 413px;
         position: relative;
         right: 2pc;
-        bottom: 14pc;
+        bottom: 18pc;
         overflow: hidden;
     }
 
@@ -756,7 +769,7 @@ a.ava { position: relative; left: 5pc;}
     section#get {
         position: relative;
         margin-left: 40px;
-        bottom: 19pc;
+        bottom: 34pc;
     } 
 
     h1,p.about {
