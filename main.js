@@ -9,6 +9,7 @@ cart.addEventListener("click",function (evt) {
   evt.preventDefault()
 cart.classList.toggle("active")
 block.classList.toggle("active")
+
 })
 }
 block()
@@ -19,7 +20,7 @@ block()
     const menu = document.querySelector(".menu-bar")
     const nav = document.querySelector(".nav-items")
     const ava = document.querySelectorAll(".ava")
-
+    
     menu.addEventListener("click",function() {
         menu.classList.toggle("menu-bar_active")
         nav.classList.toggle("nav-items_active")
@@ -28,18 +29,20 @@ block()
         })
     })
  }
-menuBtn()  
+menuBtn() 
 
+let counter = 0
 function addToCart() {
     const add = document.querySelector("#plus")
     const min = document.querySelector("#min")
-    let counter = 0
+  
  
     add.addEventListener("click", function (evt) {
      evt.preventDefault()
      const number = document.querySelector(".num")
       counter++;
      number.innerHTML = counter
+
     })
     
     min.addEventListener("click",function (evt) {
@@ -89,32 +92,48 @@ cart()
 
 
 
- function showBtn () {
+ function changePic () {
+  const replaceImg = document.querySelector("#shoe")
+  const img1 = document.querySelector("#shoe_1")
+  const img2 = document.querySelector("#shoe_2")
+  const img3 = document.querySelector("#shoe_3")
+  const img4 = document.querySelector("#shoe_4")
 
-  const contentPic = document.querySelectorAll(".shoes")
-
-  contentPic.forEach(function (evt) {
-    evt.addEventListener("click",function () {
-      const shoeBody = document.querySelector("#shoe_body")
-      const everyThing = document.querySelector("#get")
-      const cancel = document.querySelector("#cancel_menu")
-      const backOfShoe = document.querySelector("#shoe")
-      
-
-
-        evt.classList.toggle("shoe_active")
-        shoeBody.classList.toggle("body_active")
-        everyThing.classList.toggle("change")
-        cancel.classList.toggle("cancel_menu_active")
-        backOfShoe.classList.toggle("shoe_blur")
-
-
-
-        
-    })
+  img1.addEventListener("click",function() {
+    // replaceImg.classList.add('replace')
+    replaceImg.innerHTML = `<img src="./images/image-product-1.jpg" 
+    alt="pic"width="500" class="replace">`
+   
   })
+
+  img2.addEventListener("click",function(){
+    // replaceImg.classList.add("replace")
+    replaceImg.innerHTML = `<img src="./images/image-product-2.jpg"
+     alt="pic" width="500" class="replace">`
+     
+  })
+
+  img3.addEventListener("click",function(){
+    // replaceImg.classList.add("replace")
+    replaceImg.innerHTML = `<img src="./images/image-product-3.jpg" 
+    alt="pic" width="500" class="replace">`
+   
+  })
+
+  img4.addEventListener("click",function(){
+    // replaceImg.classList.add("replace")
+    replaceImg.innerHTML = `<img src="./images/image-product-4.jpg" 
+    alt="pic" width="500" class="replace"> `
+   
+     
+  })
+
+
+
+
+
  }
- showBtn()
+ changePic()
 })
 
 
